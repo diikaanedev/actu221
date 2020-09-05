@@ -1,14 +1,35 @@
 import 'package:actu221/utils/constant.dart';
 import 'package:actu221/widgets/app_bar.dart';
-import 'package:actu221/widgets/body.dart';
+import 'package:actu221/widgets/body-acceuil.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+MyGlobals myGlobals = MyGlobals();
+class MyGlobals {
+  GlobalKey _scaffoldKey;
+  MyGlobals() {
+    _scaffoldKey = GlobalKey();
+  }
+  GlobalKey get scaffoldKey => _scaffoldKey;
+}
+_HomeScreenState homeScreenState;
+class HomeScreen extends StatefulWidget {
+  @override
+  _HomeScreenState createState() {
+    homeScreenState = _HomeScreenState();
+    return homeScreenState;
+  }
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+
+  int screen = 0 ;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     // This size provide us total height and width  of our screen
     return Scaffold(
+      key: myGlobals.scaffoldKey,
       body: Container(
         height: size.height,
         // it will take full width
@@ -30,7 +51,7 @@ class HomeScreen extends StatelessWidget {
             Spacer(),
             // It will cover 1/3 of free spaces
             Container(
-              child: Body(),
+              child: screen==0 ? BodyAcceuil() : Container(),
               height: size.height * 0.8,
             ),
             Spacer(

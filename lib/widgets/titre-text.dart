@@ -5,11 +5,14 @@ class TitreText extends StatelessWidget {
   const TitreText({
     Key key,
     @required this.size,
-    @required this.titre
+    @required this.titre,
+    this.fontSize = 24 
   }) : super(key: key);
 
   final Size size;
   final String titre;
+
+  final double fontSize ;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +23,7 @@ class TitreText extends StatelessWidget {
             child: Text(titre.toUpperCase(),
                 style: TextStyle(
                     decoration: TextDecoration.underline,
-                    fontSize: 24,
+                    fontSize: fontSize,
                     color: colorPrimaire,
                     fontWeight: FontWeight.bold))));
   }

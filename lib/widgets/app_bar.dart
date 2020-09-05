@@ -1,3 +1,4 @@
+import 'package:actu221/screens/home.dart';
 import 'package:actu221/widgets/default_button.dart';
 import 'package:flutter/material.dart';
 
@@ -45,46 +46,94 @@ class CustomAppBar extends StatelessWidget {
           Spacer(),
           MenuItem(
             title: "Acceuil",
-            press: () {},
+            press: () {
+              homeScreenState.setState(() {
+                homeScreenState.screen = 0;
+              });
+            },
           ),
           MenuItem(
             title: "Actualités",
-            press: () {},
+            press: () {
+               homeScreenState.setState(() {
+                homeScreenState.screen = 1;
+              });
+            },
           ),
           MenuItem(
             title: "Politique",
-            press: () {},
+            press: () {
+               homeScreenState.setState(() {
+                homeScreenState.screen = 2;
+              });
+            },
           ),
           MenuItem(
             title: "Economique",
-            press: () {},
+            press: () {
+               homeScreenState.setState(() {
+                homeScreenState.screen = 3;
+              });
+            },
           ),
           MenuItem(
+            title: "Sport",
+            press: () {
+               homeScreenState.setState(() {
+                homeScreenState.screen = 4;
+              });
+            },
+          ),
+           MenuItem(
             title: "Société",
-            press: () {},
+            press: () {
+               homeScreenState.setState(() {
+                homeScreenState.screen = 5;
+              });
+            },
           ),
           MenuItem(
             title: "Afrique",
-            press: () {},
+            press: () {
+               homeScreenState.setState(() {
+                homeScreenState.screen = 6;
+              });
+            },
           ),
           MenuItem(
             title: "Monde",
-            press: () {},
+            press: () {
+               homeScreenState.setState(() {
+                homeScreenState.screen = 7;
+              });
+            },
           ),
           DefaultButton(
             text: "Investigation",
-            press: () {},
+            press: () {
+               homeScreenState.setState(() {
+                homeScreenState.screen = 8;
+              });
+            },
             color: Color.fromRGBO(179, 0, 20, 1),
           ),
           DefaultButton(
             color: Color.fromRGBO(255, 248, 240, 1),
             text: "Decouverte ",
-            press: () {},
+            press: () {
+               homeScreenState.setState(() {
+                homeScreenState.screen = 9;
+              });
+            },
           ),
           DefaultButton(
             text: "Entreprenariat",
             color: Color.fromRGBO(255, 220, 27, 1),
-            press: () {},
+            press: () {
+               homeScreenState.setState(() {
+                homeScreenState.screen = 10;
+              });
+            },
           ),
         ],
       ),

@@ -13,7 +13,8 @@ class CardALaUne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => showDialogArtile(size: size , article: article , context: context),
+      onTap: () =>
+          showDialogArtile(size: size, article: article, context: context),
       child: Container(
         height: size.height * 0.6,
         width: size.width * 0.5 - 5,
@@ -32,33 +33,50 @@ class CardALaUne extends StatelessWidget {
                 top: size.height * 0.4,
                 left: size.width * 0.02,
                 child: Card(
+                  // color: colorPrimaire.withOpacity(0.2),
                   elevation: 5,
                   child: Center(
                     child: Container(
-                      height: 100,
+                      height: 70,
                       width: size.width * 0.45 - 5,
-                      color: colorSecondaire,
+                      decoration: BoxDecoration(
+                        color: colorSecondaire,
+                      ),
                       child: Column(
                         children: [
                           SizedBox(
-                            height: 10,
-                          ),
-                          Center(child: Text('${article.tag}')),
-                          SizedBox(
-                            height: 14,
+                            height: 25,
                           ),
                           Center(
                             child: Text(
                               '${article.titre}',
                               style: TextStyle(
-                                  fontSize: 25, fontWeight: FontWeight.bold),
+                                  fontSize: 30, fontWeight: FontWeight.bold),
                             ),
                           ),
                         ],
                       ),
                     ),
                   ),
-                ))
+                )),
+            Positioned(
+                left: size.width * 0.022,
+                top: size.height * 0.4 - 20,
+                child: Center(
+                    child: Container(
+                        color: colorPrimaire,
+                        height: 40,
+                        width: size.width / 12,
+                        child: Center(
+                          child: Text(
+                            article.tag.toUpperCase(),
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold
+                              ),
+                          ),
+                        )))),
           ],
         ),
       ),

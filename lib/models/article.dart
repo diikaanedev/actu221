@@ -16,6 +16,8 @@ class Article {
 
   int positionUne ;
 
+  List<String> allFichier = []; 
+
   Article({
     @required this.id ,
     @required this.titre ,
@@ -24,6 +26,7 @@ class Article {
     @required this.positionUne,
     @required this.tag ,
     @required this.urlPhoto,
+    this.allFichier,
   });
 
 }

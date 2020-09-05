@@ -1,4 +1,3 @@
-import 'package:actu221/utils/constant.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +16,7 @@ class ArticleText extends StatelessWidget {
     return Container(
         width: size.width * .43,
         decoration: BoxDecoration(
-          border: Border.all(color: colorPrimaire , width: .2)
+          //border: Border.all(color: colorPrimaire , width: .2)
         ),
         //color: Colors.black,
         child: Padding(
@@ -25,11 +24,9 @@ class ArticleText extends StatelessWidget {
           child: Text(titre,
               style: TextStyle(
                   // decoration: TextDecoration.underline,
-                  fontSize: 18,
-                  letterSpacing: 1.2,
+                  fontSize: 14,
                   decoration: TextDecoration.none,
-                  wordSpacing: 1.2,
-                  fontWeight: FontWeight.bold)),
+                  fontWeight: FontWeight.w300)),
         ));
   }
 }
