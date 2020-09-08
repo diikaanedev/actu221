@@ -1,6 +1,7 @@
+import 'package:actu221/pages/body-actualite.dart';
 import 'package:actu221/utils/constant.dart';
 import 'package:actu221/widgets/app_bar.dart';
-import 'package:actu221/widgets/body-acceuil.dart';
+import 'package:actu221/pages/body-acceuil.dart';
 import 'package:flutter/material.dart';
 
 MyGlobals myGlobals = MyGlobals();
@@ -23,6 +24,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
 
   int screen = 0 ;
+
+  String search ='';
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Spacer(),
             // It will cover 1/3 of free spaces
             Container(
-              child: screen==0 ? BodyAcceuil() : Container(),
+              child: screen==0 ? BodyAcceuil() : BodyActualite(),
               height: size.height * 0.8,
             ),
             Spacer(
