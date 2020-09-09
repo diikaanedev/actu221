@@ -1,0 +1,87 @@
+ child: ListView(
+                physics: BouncingScrollPhysics(),
+                children: [
+                  Container(
+                    height: size.height * .22,
+                    // color: Colors.blue,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        CardOtherPage(
+                          article: articleOne,
+                        ),
+                        CardOtherPage(article: articleTwo),
+                        CardOtherPage(article: articleTree),
+                        CardOtherPage(
+                          article: articleOne,
+                        ),
+                        CardOtherPage(article: articleTwo),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                 Container(
+                    height: size.height * .22,
+                    // color: Colors.blue,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        CardOtherPage(
+                          article: articleOne,
+                        ),
+                        CardOtherPage(article: articleTwo),
+                        CardOtherPage(article: articleTree),
+                        CardOtherPage(
+                          article: articleOne,
+                        ),
+                        CardOtherPage(article: articleTwo),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Container(
+                    height: size.height * .22,
+                    // color: Colors.blue,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        CardOtherPage(
+                          article: articleOne,
+                        ),
+                        CardOtherPage(article: articleTwo),
+                        CardOtherPage(article: articleTree),
+                        CardOtherPage(
+                          article: articleOne,
+                        ),
+                        CardOtherPage(article: articleTwo),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Container(
+                    height: size.height * .22,
+                    // color: Colors.blue,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        CardOtherPage(
+                          article: articleOne,
+                        ),
+                        CardOtherPage(article: articleTwo),
+                        CardOtherPage(article: articleTree),
+                        CardOtherPage(
+                          article: articleOne,
+                        ),
+                        CardOtherPage(article: articleTwo),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            
