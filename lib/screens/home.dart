@@ -7,6 +7,7 @@ import 'package:actu221/utils/constant.dart';
 import 'package:actu221/utils/web.dart';
 import 'package:actu221/widgets/app_bar.dart';
 import 'package:actu221/pages/body-acceuil.dart';
+import 'package:actu221/widgets/breaking-news.dart';
 import 'package:flutter/material.dart';
 
 MyGlobals myGlobals = MyGlobals();
@@ -161,13 +162,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   ? buildAcceuil(context, homeScreenState.listeArticles)
                   : buildBodyActualite(context),
               // color: Colors.blue,
-              height: size.height * 0.90,
+              height: size.height * 0.87,
             ),
             screen == 0 ? Center(
               child: Container(
-                height: size.height * 0.04,
-                color: colorPrimaire,
-                width: size.width * .8,
+                height: size.height * 0.06,
+                // color: colorPrimaire,
+                // width: size.width * .8,
+                child: BreakingNews(),
               ),
             ) : Container()
           ],

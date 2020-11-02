@@ -426,7 +426,7 @@ Widget buildAcceuil(BuildContext context, List<Article> liste) {
           height: 50,
         ),
         Container(
-            height: size.height * .07, width: size.width, color: colorPrimaire)
+            height: size.height * .07, width: size.width, color: colorPrimaire ,)
       ],
     ),
   );
