@@ -1,4 +1,5 @@
 import 'package:actu221/models/article.dart';
+import 'package:actu221/utils/constant.dart';
 import 'package:actu221/widgets/show-dialog-article.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +28,8 @@ class CardOtherNotUneSecond extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
                   image: DecorationImage(
-                      image: AssetImage(article.urlPhoto), fit: BoxFit.cover)),
+                      image: NetworkImage(article.urlPhoto),
+                      fit: BoxFit.contain)),
             ),
             Positioned(
                 top: size.height * 0.2,
@@ -36,17 +38,44 @@ class CardOtherNotUneSecond extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
                     elevation: 5,
-                    color: Colors.white.withOpacity(0.4),
+                    // color: Colors.white.withOpacity(0.6),
                     child: Center(
                       child: Container(
                         height: 50,
                         width: size.width * 0.20 - 5,
-                        color: Colors.transparent,
+                        color: Colors.white,
                         child: Center(
                           child: Text(
                             '${article.titre}',
                             style: TextStyle(
                                 fontSize: 14,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.black),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                )),
+            Positioned(
+              left: size.width * .02,
+              top: size.height * 0.18,
+              child: Container(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
+                    elevation: 5,
+                    color: colorPrimaire,
+                    child: Center(
+                      child: Container(
+                        height: 25,
+                        width: size.width * 0.08,
+                        color: colorPrimaire,
+                        child: Center(
+                          child: Text(
+                            '${article.tag}',
+                            style: TextStyle(
+                                fontSize: 12,
                                 fontWeight: FontWeight.w700,
                                 color: Colors.white),
                           ),
@@ -54,7 +83,9 @@ class CardOtherNotUneSecond extends StatelessWidget {
                       ),
                     ),
                   ),
-                ))
+                ),
+              ),
+            )
           ],
         ),
       ),

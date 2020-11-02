@@ -13,12 +13,13 @@ class DefaultButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(8),
         child: FlatButton(
-          padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           color: color,
           onPressed: press,
           child: Text(

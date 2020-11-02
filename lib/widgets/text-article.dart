@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 
 class ArticleText extends StatelessWidget {
   const ArticleText({
@@ -21,12 +22,8 @@ class ArticleText extends StatelessWidget {
         //color: Colors.black,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Text(titre,
-              style: TextStyle(
-                  // decoration: TextDecoration.underline,
-                  fontSize: 14,
-                  decoration: TextDecoration.none,
-                  fontWeight: FontWeight.w300)),
+          child: Html(data:titre,
+              ),
         ));
   }
 }

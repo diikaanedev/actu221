@@ -27,7 +27,7 @@ class CardALaUne extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                      image: AssetImage(article.urlPhoto), fit: BoxFit.cover)),
+                      image: NetworkImage(article.urlPhoto), fit: BoxFit.cover)),
             ),
             Positioned(
                 top: size.height * 0.4,
@@ -51,7 +51,7 @@ class CardALaUne extends StatelessWidget {
                             child: Text(
                               '${article.titre}',
                               style: TextStyle(
-                                  fontSize: 30, fontWeight: FontWeight.bold),
+                                  fontSize: 27, fontWeight: FontWeight.bold),
                             ),
                           ),
                         ],
