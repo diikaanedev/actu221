@@ -20,7 +20,7 @@ class CardOtherPage extends StatelessWidget {
               // color: colorPrimaire,
               borderRadius: BorderRadius.circular(5),
               image: DecorationImage(
-                  image: AssetImage(article.urlPhoto), fit: BoxFit.cover)),
+                  image: NetworkImage(article.urlPhoto), fit: BoxFit.cover)),
           child: Stack(
             children: [
               Container(
@@ -40,27 +40,32 @@ class CardOtherPage extends StatelessWidget {
                     child: Center(
                       child: Text(
                         article.titre,
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                             color: colorPrimaire,
                             fontWeight: FontWeight.bold,
-                            fontSize: 9),
+                            fontSize: 14),
                       ),
                     ),
                   )),
               Positioned(
-                  top: size.height * .145,
+                  top: size.height * .130,
                   left: size.width * .014,
                   child: Container(
                     height: size.height * 0.03,
                     width: size.width * .07,
                     color: colorPrimaire,
                     child: Center(
-                      child: Text(
-                        article.tag,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 10,
-                            fontWeight: FontWeight.w600),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top:8.0),
+                        child: Text(
+                          article.tag,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600),
+                        ),
                       ),
                     ),
                   )),

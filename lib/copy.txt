@@ -85,3 +85,48 @@
                 ],
               ),
             
+
+
+
+            homeScreenState.screen == 1
+                ? Container(
+                    height: 5,
+                    width: 75,
+                    color: colorPrimaire,
+                  )
+                : Container(),
+            homeScreenState.screen == 2
+                ? Container(
+                    height: 5,
+                    width: 75,
+                    color: colorPrimaire,
+                  )
+                : Container(),
+            homeScreenState.screen == 3
+                ? Container(
+                    height: 5,
+                    width: 75,
+                    color: colorPrimaire,
+                  )
+                : Container(),
+            homeScreenState.screen == 4
+                ? Container(
+                    height: 5,
+                    width: 75,
+                    color: colorPrimaire,
+                  )
+                : Container(),
+            homeScreenState.screen == 5
+                ? Container(
+                    height: 5,
+                    width: 75,
+                    color: colorPrimaire,
+                  )
+                : Container(),
+            homeScreenState.screen == 6
+                ? Container(
+                    height: 5,
+                    width: 75,
+                    color: colorPrimaire,
+                  )
+                : Container()

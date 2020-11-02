@@ -35,7 +35,7 @@ showDialogTof({BuildContext context, Article article, int i}) {
           height: size.height * 0.7,
           color: Colors.transparent,
           width: size.width * 0.5,
-          child: Image.asset(
+          child: Image.network(
             article.allFichier[i],
             fit: BoxFit.cover,
           ),

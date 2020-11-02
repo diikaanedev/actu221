@@ -24,7 +24,7 @@ class CardOtherNotUne extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                      image: AssetImage(article.urlPhoto), fit: BoxFit.cover)),
+                      image: NetworkImage(article.urlPhoto), fit: BoxFit.contain)),
             ),
             Positioned(
                 top: size.height * 0.3,

@@ -17,24 +17,55 @@ class CardOtherUne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => showDialogArtile(article: article , context: context , size: size),
+      onTap: () =>
+          showDialogArtile(article: article, context: context, size: size),
       child: Container(
         height: size.height * 0.6,
-        width: size.width * 0.5 - 5,
+        // width: size.width * 0.5 - 5,
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(5)),
-        //color: Colors.red,
+        // color: Colors.red,
         child: Stack(
           children: [
             Container(
               height: size.height * 0.3,
-              width: size.width * 0.25 - 5,
+              width: size.width * 0.2,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
+                  // color: Colors.red,
                   image: DecorationImage(
-                      image: AssetImage(article.urlPhoto), fit: BoxFit.cover)),
+                      image: NetworkImage(article.urlPhoto),
+                      fit: BoxFit.contain)),
             ),
             Positioned(
                 top: size.height * 0.2,
+                left: -15,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
+                    elevation: 4,
+                    // color: Colors.white.withOpacity(0.4),
+                    color: Colors.blue,
+                    child: Center(
+                      child: Container(
+                        height: 50,
+                        width: size.width * 0.2,
+                        decoration: BoxDecoration(color: colorPrimaire),
+                        child: Center(
+                          child: Text(
+                            '${article.titre}',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                )),
+            Positioned(
+                top: size.height * 0.18,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
@@ -42,31 +73,24 @@ class CardOtherUne extends StatelessWidget {
                     color: Colors.white.withOpacity(0.4),
                     child: Center(
                       child: Container(
-                        height: 50,
-                        width: size.width * 0.20 - 5,
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter,
-                            colors: [
-                            colorPrimaire.withOpacity(0.6),
-                            colorPrimaire.withOpacity(0.2),
-                          ]
-                          )
-                        ),
+                        height: 25,
+                        width: size.width * 0.1,
+                        decoration: BoxDecoration(color: Colors.white),
                         // color: colorPrimaire.withOpacity(0.5),
                         child: Center(
                           child: Text(
                             '${article.tag}',
+                            textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Colors.white,
-                                fontSize: 15, fontWeight: FontWeight.bold),
+                                color: colorPrimaire,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w400),
                           ),
                         ),
                       ),
                     ),
                   ),
-                ))
+                )),
           ],
         ),
       ),
