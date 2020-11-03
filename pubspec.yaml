@@ -29,6 +29,7 @@ dependencies:
   dio: ^3.0.9
   flutter_html: ^1.0.0
   carousel_pro: ^1.0.0
+  carousel_slider: ^2.3.1
 
 
   # The following adds the Cupertino Icons font to your application.
