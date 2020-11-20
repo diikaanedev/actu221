@@ -44,8 +44,6 @@ class CustomAppBar extends StatelessWidget {
               elevation: 2,
               child: Container(
                 width: MediaQuery.of(context).size.width * .1,
-                // height: 50,
-                // color: Colors.blue,
                 child: Center(
                   child: Image.asset(
                     "assets/images/logo_solgan.png",
@@ -56,11 +54,6 @@ class CustomAppBar extends StatelessWidget {
               ),
             ),
           ),
-          //SizedBox(width: 5),
-          // Text(
-          //   "Actu221".toUpperCase(),
-          //   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-          // ),
           Spacer(),
           MenuItem(
             title: "Acceuil",
@@ -180,5 +173,149 @@ class CustomAppBar extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class CustumAppBarLaptop1024 extends StatelessWidget {
+  resetAppBarUnderline() {
+    homeScreenState.setState(() {
+      homeScreenState.acceuil_appBar = false;
+      homeScreenState.actualite_appBar = false;
+      homeScreenState.politique_appBar = false;
+      homeScreenState.economique_appBar = false;
+      homeScreenState.sport_appBar = false;
+      homeScreenState.societe_appBar = false;
+      homeScreenState.afrique_appBar = false;
+      homeScreenState.monde_appBar = false;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+        width: size.width,
+        margin: EdgeInsets.all(.5),
+        padding: EdgeInsets.all(.5),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(5),
+          boxShadow: [
+            BoxShadow(
+              offset: Offset(0, -1),
+              blurRadius: 30,
+              color: Colors.black.withOpacity(0.16),
+            ),
+          ],
+        ),
+        child: Row(children: <Widget>[
+          InkWell(
+            onTap: () => homeScreenState.setState(() {
+              homeScreenState.screen = 0;
+            }),
+            child: Card(
+              elevation: 2,
+              child: Container(
+                width: MediaQuery.of(context).size.width * .2,
+                child: Center(
+                  child: Image.asset(
+                    "assets/images/logo_solgan.png",
+                    fit: BoxFit.contain,
+                    alignment: Alignment.center,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Spacer(),
+          MenuItemLatop1024(
+            title: "Accueil",
+            actif: homeScreenState.acceuil_appBar,
+            press: () {
+              homeScreenState.setState(() {
+                homeScreenState.screen = 0;
+                resetAppBarUnderline();
+                homeScreenState.acceuil_appBar = true;
+              });
+            },
+          ),
+          MenuItemLatop1024(
+            title: "Actualités",
+            actif: homeScreenState.actualite_appBar,
+            press: () {
+              homeScreenState.setState(() {
+                homeScreenState.screen = 1;
+                resetAppBarUnderline();
+                homeScreenState.actualite_appBar = true;
+              });
+            },
+          ),
+          MenuItemLatop1024(
+            title: "Politique",
+            actif: homeScreenState.politique_appBar,
+            press: () {
+              homeScreenState.setState(() {
+                homeScreenState.screen = 2;
+                resetAppBarUnderline();
+                homeScreenState.politique_appBar = true;
+              });
+            },
+          ),
+          MenuItemLatop1024(
+            actif: homeScreenState.economique_appBar,
+            title: "Economie",
+            press: () {
+              homeScreenState.setState(() {
+                homeScreenState.screen = 3;
+                resetAppBarUnderline();
+                homeScreenState.economique_appBar = true;
+              });
+            },
+          ),
+          MenuItemLatop1024(
+            actif: homeScreenState.sport_appBar,
+            title: "Sport",
+            press: () {
+              homeScreenState.setState(() {
+                homeScreenState.screen = 4;
+                resetAppBarUnderline();
+                homeScreenState.sport_appBar = true;
+              });
+            },
+          ),
+          MenuItemLatop1024(
+            actif: homeScreenState.societe_appBar,
+            title: "Société",
+            press: () {
+              homeScreenState.setState(() {
+                homeScreenState.screen = 5;
+                resetAppBarUnderline();
+                homeScreenState.societe_appBar = true;
+              });
+            },
+          ),
+          MenuItemLatop1024(
+            actif: homeScreenState.afrique_appBar,
+            title: "Afrique",
+            press: () {
+              homeScreenState.setState(() {
+                homeScreenState.screen = 6;
+                resetAppBarUnderline();
+                homeScreenState.afrique_appBar = true;
+              });
+            },
+          ),
+          MenuItemLatop1024(
+            actif: homeScreenState.monde_appBar,
+            title: "Monde",
+            press: () {
+              homeScreenState.setState(() {
+                homeScreenState.screen = 7;
+                resetAppBarUnderline();
+                homeScreenState.monde_appBar = true;
+              });
+            },
+          ),
+        ]));
   }
 }

@@ -134,6 +134,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    print('size.heigth => ${size.height} , size.width => ${size.width} , ');
     // This size provide us total height and width  of our screen
     return Scaffold(
       key: myGlobals.scaffoldKey,
@@ -153,7 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               height: size.height * 0.06,
               // color: Colors.red,
-              child: CustomAppBar(),
+              child:  size.width > 1500 ? CustomAppBar() : size.width >= 1024 ?  CustumAppBarLaptop1024() : Container(),
             ),
             Container(
               child: 

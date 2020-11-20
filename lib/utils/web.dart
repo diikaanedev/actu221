@@ -5,9 +5,9 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 const base_url =
-    'http://apiactu221.telectronsenegal.com/api/v1/';
+    'https://apiactu221.telectronsenegal.com/api/v1/';
     
-const base_url_fichier = 'http://actu221.telectronsenegal.com/'; //ENLEVER LES SS
+const base_url_fichier = 'https://actu221.telectronsenegal.com/'; //ENLEVER LES SS
 
 verifIfApiIsAvailable() async {
   return http.get(base_url).then(((req) async {

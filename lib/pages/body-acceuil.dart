@@ -12,11 +12,12 @@ import 'package:flutter/material.dart';
 Widget buildAcceuil(BuildContext context, List<Article> liste) {
   List<Article> reversedListe = liste.length == 0 ? [] : liste;
 
+  
+
   List<Article> listeActualite = liste.take(8).toList();
 
   List<Article> listeDossierRedaction = liste.take(3).toList();
 
-  print('listeActualite => $listeActualite');
   homeScreenState.setState(() {
     homeScreenState.articleOneWeb = reversedListe.length > 0
         ? reversedListe.firstWhere(
@@ -166,7 +167,11 @@ Widget buildAcceuil(BuildContext context, List<Article> liste) {
         ),
         Container(
           height: 75,
-          child: TitreText(size: size, titre: 'ACTUALITÉS' ,screen: 10,),
+          child: TitreText(
+            size: size,
+            titre: 'ACTUALITÉS',
+            screen: 10,
+          ),
         ),
         Container(
           // color: Colors.green,
@@ -182,7 +187,11 @@ Widget buildAcceuil(BuildContext context, List<Article> liste) {
         separationWidget(size),
         Container(
           height: 75,
-          child: TitreText(size: size, titre: 'Dossier de la RÉDACTION' , screen: 13,),
+          child: TitreText(
+            size: size,
+            titre: 'Dossier de la RÉDACTION',
+            screen: 13,
+          ),
         ),
         Container(
           // color: Colors.green,
@@ -280,7 +289,11 @@ Widget buildAcceuil(BuildContext context, List<Article> liste) {
         separationWidget(size),
         Container(
           height: 75,
-          child: TitreText(size: size, titre: 'POLITIQUE' , screen: 2, ),
+          child: TitreText(
+            size: size,
+            titre: 'POLITIQUE',
+            screen: 2,
+          ),
         ),
         Container(
           // color: Colors.green,
@@ -296,7 +309,11 @@ Widget buildAcceuil(BuildContext context, List<Article> liste) {
         separationWidget(size),
         Container(
           height: 75,
-          child: TitreText(size: size, titre: 'ECONOMIE', screen: 3,),
+          child: TitreText(
+            size: size,
+            titre: 'ECONOMIE',
+            screen: 3,
+          ),
         ),
         Container(
           // color: Colors.green,
@@ -312,7 +329,7 @@ Widget buildAcceuil(BuildContext context, List<Article> liste) {
         separationWidget(size),
         Container(
           height: 75,
-          child: TitreText(size: size, titre: 'SPORT' , screen: 4),
+          child: TitreText(size: size, titre: 'SPORT', screen: 4),
         ),
         Container(
           // color: Colors.green,
@@ -328,7 +345,11 @@ Widget buildAcceuil(BuildContext context, List<Article> liste) {
         separationWidget(size),
         Container(
           height: 75,
-          child: TitreText(size: size, titre: 'SOCIETE' , screen:5 , ),
+          child: TitreText(
+            size: size,
+            titre: 'SOCIETE',
+            screen: 5,
+          ),
         ),
         Container(
           // color: Colors.green,
@@ -344,7 +365,11 @@ Widget buildAcceuil(BuildContext context, List<Article> liste) {
         separationWidget(size),
         Container(
           height: 75,
-          child: TitreText(size: size, titre: 'Ressource du Sénégal' , screen: 14, ),
+          child: TitreText(
+            size: size,
+            titre: 'Ressource du Sénégal',
+            screen: 14,
+          ),
         ),
         Container(
           // color: Colors.green,
@@ -360,7 +385,11 @@ Widget buildAcceuil(BuildContext context, List<Article> liste) {
         separationWidget(size),
         Container(
           height: 75,
-          child: TitreText(size: size, titre: 'SOCIÉTÉ' , screen: 5, ),
+          child: TitreText(
+            size: size,
+            titre: 'SOCIÉTÉ',
+            screen: 5,
+          ),
         ),
         Container(
           // color: Colors.green,
@@ -376,7 +405,11 @@ Widget buildAcceuil(BuildContext context, List<Article> liste) {
         separationWidget(size),
         Container(
           height: 75,
-          child: TitreText(size: size, titre: 'afrique' , screen: 6, ),
+          child: TitreText(
+            size: size,
+            titre: 'afrique',
+            screen: 6,
+          ),
         ),
         Container(
           // color: Colors.green,
@@ -392,7 +425,11 @@ Widget buildAcceuil(BuildContext context, List<Article> liste) {
         separationWidget(size),
         Container(
           height: 75,
-          child: TitreText(size: size, titre: 'technologie' , screen: 15, ),
+          child: TitreText(
+            size: size,
+            titre: 'technologie',
+            screen: 15,
+          ),
         ),
         Container(
           // color: Colors.green,
@@ -408,7 +445,11 @@ Widget buildAcceuil(BuildContext context, List<Article> liste) {
         separationWidget(size),
         Container(
           height: 75,
-          child: TitreText(size: size, titre: 'monde' ,screen: 7, ),
+          child: TitreText(
+            size: size,
+            titre: 'monde',
+            screen: 7,
+          ),
         ),
         Container(
           // color: Colors.green,
@@ -426,7 +467,10 @@ Widget buildAcceuil(BuildContext context, List<Article> liste) {
           height: 50,
         ),
         Container(
-            height: size.height * .07, width: size.width, color: colorPrimaire ,)
+          height: size.height * .07,
+          width: size.width,
+          color: colorPrimaire,
+        )
       ],
     ),
   );
